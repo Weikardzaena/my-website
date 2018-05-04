@@ -1,6 +1,6 @@
 # MyWebsite
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+This is my website.  It is written in Angular 4 and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
 ## Development server
 
