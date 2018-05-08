@@ -1,0 +1,40 @@
+#content-wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#content h1 {
+    text-align: center;
+}
+
+#navbar {
+    width: 100%;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navbar li {
+    display: inline-block;
+    margin-right: 2em;
+}
+
+#navbar li:last-of-type {
+    margin-right: 0;
+}
+
+@media screen and (min-width: 56em) {
+    #content-wrapper {
+        width: 50em;
+    }
+
+    #navbar {
+        margin: 0 auto;
+    }
+
+    #navbar li {
+        margin-right: 2em;
+    }
+}

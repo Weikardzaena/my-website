@@ -1,9 +1,11 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/home">Home</a>
-  <a routerLink="/about">About Me</a>
-  <a routerLink="/projects">My Projects</a>
-  <a routerLink="/contact">Contact Me</a>
-  <a routerLink="/legal">Legal</a>
-</nav>
-<router-outlet></router-outlet>
+<div id="content-wrapper">
+  <div id="content">
+    <h1>{{title}}</h1>
+    <nav id="navbar">
+      <ul>
+        <li *ngFor="let route of routes"><a [routerLink]="route.path">{{route.name}}</a></li>
+      </ul>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+</div>
