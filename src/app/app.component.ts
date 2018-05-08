@@ -2,6 +2,12 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
+const LARGE_SIZE = "65em";
+const MEDIUM_SIZE = "55em";
+const SMALL_SIZE = "36em";
+const XSMALL_SIZE = "100%";
+const XLARGE_SIZE = "80em";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +16,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 export class AppComponent {
   title = 'George Nikolai Kotula';
   routes: object[];
+  contentSize = MEDIUM_SIZE;
 
   constructor(router: Router, breakpointObserver: BreakpointObserver) {
     this.routes = [];
@@ -25,24 +32,79 @@ export class AppComponent {
       }
     });
 
+    // XSmall layout:
     breakpointObserver.observe([
-      Breakpoints.Handset
+      Breakpoints.XSmall
     ]).subscribe(result => {
       if (result.matches) {
-        this.ActivateMobileLayout();
-      } else {
-        this.ActivateDesktopLayout();
+        this.ActivateXSmallLayout();
+      }
+    });
+
+    // Small layout
+    breakpointObserver.observe([
+      Breakpoints.Small
+    ]).subscribe(result => {
+      if (result.matches) {
+        this.ActivateSmallLayout();
+      }
+    });
+
+    // Medium tablet layout
+    breakpointObserver.observe([
+      Breakpoints.Medium
+    ]).subscribe(result => {
+      if (result.matches) {
+        this.ActivateMediumLayout();
+      }
+    });
+
+    // Large layout
+    breakpointObserver.observe([
+      Breakpoints.Large
+    ]).subscribe(result => {
+      if (result.matches) {
+        this.ActivateLargeLayout();
+      }
+    });
+
+    // XLarge layout
+    breakpointObserver.observe([
+      Breakpoints.XLarge
+    ]).subscribe(result => {
+      if (result.matches) {
+        this.ActivateXLargeLayout();
       }
     });
   }
 
-  private ActivateMobileLayout(): void
+  private ActivateLargeLayout(): void
   {
-    console.log("Mobile!");
+    this.contentSize = LARGE_SIZE;
+    console.log("Large!");
   }
 
-  private ActivateDesktopLayout(): void
+  private ActivateMediumLayout(): void
   {
-    console.log("Desktop!");
+    this.contentSize = MEDIUM_SIZE;
+    console.log("Medium!");
+  }
+
+  private ActivateSmallLayout(): void
+  {
+    this.contentSize = SMALL_SIZE;
+    console.log("Small!");
+  }
+
+  private ActivateXLargeLayout(): void
+  {
+    this.contentSize = XLARGE_SIZE;
+    console.log("XLarge!");
+  }
+
+  private ActivateXSmallLayout(): void
+  {
+    this.contentSize = XSMALL_SIZE;
+    console.log("XSmall!");
   }
 }
