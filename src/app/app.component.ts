@@ -8,6 +8,9 @@ const SMALL_SIZE = "36em";
 const XSMALL_SIZE = "100%";
 const XLARGE_SIZE = "80em";
 
+const LINK_WIDTH_SMALL = "25%";
+const LINK_WIDTH_DEFAULT = "11em"; // 20% of MEDIUM_SIZE
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,7 +19,10 @@ const XLARGE_SIZE = "80em";
 export class AppComponent {
   title = 'George Nikolai Kotula';
   routes: object[];
+  excludedRoutes = ["legal"];
+
   contentSize = MEDIUM_SIZE;
+  linkWidth = LINK_WIDTH_DEFAULT;
 
   constructor(router: Router, breakpointObserver: BreakpointObserver) {
     this.routes = [];
@@ -25,10 +31,12 @@ export class AppComponent {
     // Build the strings based on the paths, but capitalize them:
     router.config.forEach(route => {
       if ((route.path !== undefined) && (route.path !== "")) {
-        builder = "";
-        builder += route.path.charAt(0).toUpperCase();
-        builder += route.path.substr(1, route.path.length - 1);
-        this.routes.push({path : route.path, name : builder});
+        if (this.excludedRoutes.indexOf(route.path) < 0) {
+          builder = "";
+          builder += route.path.charAt(0).toUpperCase();
+          builder += route.path.substr(1, route.path.length - 1);
+          this.routes.push({path : route.path, name : builder});
+        }
       }
     });
 
@@ -81,30 +89,35 @@ export class AppComponent {
   private ActivateLargeLayout(): void
   {
     this.contentSize = LARGE_SIZE;
+    this.linkWidth = LINK_WIDTH_DEFAULT;
     console.log("Large!");
   }
 
   private ActivateMediumLayout(): void
   {
     this.contentSize = MEDIUM_SIZE;
+    this.linkWidth = LINK_WIDTH_DEFAULT;
     console.log("Medium!");
   }
 
   private ActivateSmallLayout(): void
   {
     this.contentSize = SMALL_SIZE;
+    this.linkWidth = LINK_WIDTH_SMALL;
     console.log("Small!");
   }
 
   private ActivateXLargeLayout(): void
   {
     this.contentSize = XLARGE_SIZE;
+    this.linkWidth = LINK_WIDTH_DEFAULT;
     console.log("XLarge!");
   }
 
   private ActivateXSmallLayout(): void
   {
     this.contentSize = XSMALL_SIZE;
+    this.linkWidth = LINK_WIDTH_SMALL;
     console.log("XSmall!");
   }
 }
