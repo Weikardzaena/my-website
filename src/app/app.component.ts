@@ -8,8 +8,12 @@ const SMALL_SIZE = "36em";
 const XSMALL_SIZE = "100%";
 const XLARGE_SIZE = "80em";
 
-const LINK_WIDTH_SMALL = "25%";
+const LINK_WIDTH_SMALL = "22%";
 const LINK_WIDTH_DEFAULT = "11em"; // 20% of MEDIUM_SIZE
+const LINK_HORIZ_MARGIN_DEFAULT = "1em";
+const LINK_HORIZ_MARGIN_SMALL = "0.3em";
+const LINK_PADDING_DEFAULT = "1em";
+const LINK_PADDING_SMALL = "0.6em";
 
 @Component({
   selector: 'app-root',
@@ -23,6 +27,8 @@ export class AppComponent {
 
   contentSize = MEDIUM_SIZE;
   linkWidth = LINK_WIDTH_DEFAULT;
+  linkHorizMargin = LINK_HORIZ_MARGIN_DEFAULT;
+  linkPadding = LINK_PADDING_DEFAULT;
 
   constructor(router: Router, breakpointObserver: BreakpointObserver) {
     this.routes = [];
@@ -90,6 +96,8 @@ export class AppComponent {
   {
     this.contentSize = LARGE_SIZE;
     this.linkWidth = LINK_WIDTH_DEFAULT;
+    this.linkHorizMargin = LINK_HORIZ_MARGIN_DEFAULT;
+    this.linkPadding = LINK_PADDING_DEFAULT;
     console.log("Large!");
   }
 
@@ -97,6 +105,8 @@ export class AppComponent {
   {
     this.contentSize = MEDIUM_SIZE;
     this.linkWidth = LINK_WIDTH_DEFAULT;
+    this.linkHorizMargin = LINK_HORIZ_MARGIN_DEFAULT;
+    this.linkPadding = LINK_PADDING_DEFAULT;
     console.log("Medium!");
   }
 
@@ -104,6 +114,8 @@ export class AppComponent {
   {
     this.contentSize = SMALL_SIZE;
     this.linkWidth = LINK_WIDTH_SMALL;
+    this.linkHorizMargin = LINK_HORIZ_MARGIN_SMALL;
+    this.linkPadding = LINK_PADDING_SMALL;
     console.log("Small!");
   }
 
@@ -111,6 +123,8 @@ export class AppComponent {
   {
     this.contentSize = XLARGE_SIZE;
     this.linkWidth = LINK_WIDTH_DEFAULT;
+    this.linkHorizMargin = LINK_HORIZ_MARGIN_DEFAULT;
+    this.linkPadding = LINK_PADDING_DEFAULT;
     console.log("XLarge!");
   }
 
@@ -118,6 +132,8 @@ export class AppComponent {
   {
     this.contentSize = XSMALL_SIZE;
     this.linkWidth = LINK_WIDTH_SMALL;
+    this.linkHorizMargin = LINK_HORIZ_MARGIN_SMALL;
+    this.linkPadding = LINK_PADDING_SMALL;
     console.log("XSmall!");
   }
 }

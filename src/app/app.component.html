@@ -3,7 +3,18 @@
     <h1>{{title}}</h1>
     <div id="navbar">
       <ul>
-        <li [style.width]="linkWidth" [style.marginBottom]="linkMarginBot" *ngFor="let route of routes"><a [routerLink]="route.path">{{route.name}}</a></li>
+        <li [style.margin-left]="linkHorizMargin"
+        [style.margin-right]="linkHorizMargin"
+        routerLinkActive="active-link"
+        [style.width]="linkWidth"
+        *ngFor="let route of routes">
+
+          <a [style.padding]="linkPadding"
+          [routerLink]="route.path">
+              {{route.name}}
+          </a>
+
+        </li>
       </ul>
     </div>
     <router-outlet></router-outlet>
