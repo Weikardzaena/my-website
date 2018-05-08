@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,600');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root {
+    --main-bg-color: #282828;
+    --main-fg-color: #f0f0f0;
+    --main-accent-color: #70cdff;
+    --second-accent-color: #cfa8ff;
+    --error-accent-color: #cf0000;
+    --warn-accent-color: #ffae18;
+}
+
+html, body {
+    background: var(--main-bg-color);
+    color: var(--main-fg-color);
+    font-family: "Montserrat";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Source Code Pro";
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+a {
+    font-weight: bold;
+}
+
+a:link {
+    color: var(--main-accent-color);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--second-accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.main-accent {
+    color: var(--main-accent-color);
+}
+
+.second-accent {
+    color: var(--second-accent-color);
+}
+
+.error {
+    color: var(--error-accent-color);
+}
+
+.warning {
+    color: var(--warn-accent-color);
+}
