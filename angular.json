@@ -52,7 +52,7 @@
           "options": {
             "browserTarget": "my-website:build",
             "port": 4200,
-            "host": "192.168.200.20"
+            "host": "0.0.0.0"
           },
           "configurations": {
             "production": {
