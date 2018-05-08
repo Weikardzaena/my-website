@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ export class AppComponent {
   title = 'George Nikolai Kotula';
   routes: object[];
 
-  constructor(router: Router) {
+  constructor(router: Router, breakpointObserver: BreakpointObserver) {
     this.routes = [];
     let builder: string = "";
 
@@ -23,5 +24,25 @@ export class AppComponent {
         this.routes.push({path : route.path, name : builder});
       }
     });
+
+    breakpointObserver.observe([
+      Breakpoints.Handset
+    ]).subscribe(result => {
+      if (result.matches) {
+        this.ActivateMobileLayout();
+      } else {
+        this.ActivateDesktopLayout();
+      }
+    });
+  }
+
+  private ActivateMobileLayout(): void
+  {
+    console.log("Mobile!");
+  }
+
+  private ActivateDesktopLayout(): void
+  {
+    console.log("Desktop!");
   }
 }
