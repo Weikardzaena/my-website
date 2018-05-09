@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,600');
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 :root {
     --main-bg-color: #282828;
@@ -14,7 +14,12 @@
 html, body {
     background: var(--main-bg-color);
     color: var(--main-fg-color);
-    font-family: "Montserrat";
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    text-align: justify;
+    font-size: 1.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
