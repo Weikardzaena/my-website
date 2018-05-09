@@ -5,6 +5,7 @@
     --main-bg-color: #282828;
     --main-fg-color: #f0f0f0;
     --main-accent-color: #70cdff;
+    --second-fg-color: #bbbbbb;
     --second-bg-color: #555555;
     --second-accent-color: #cfa8ff;
     --error-accent-color: #cf0000;
@@ -15,6 +16,9 @@ html, body {
     background: var(--main-bg-color);
     color: var(--main-fg-color);
     font-family: "Open Sans", sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 p {

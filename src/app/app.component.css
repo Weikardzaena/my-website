@@ -1,5 +1,6 @@
 #content-wrapper {
     margin: 0 auto;
+    min-height: calc(100vh - 95px);
 }
 
 #content h1 {
@@ -41,5 +42,13 @@
 }
 
 .active-link {
+    background-color: var(--second-bg-color);
+}
+
+#footer {
+    font-size: 0.85em;
+    color: var(--second-fg-color);
+    padding: 0.5em;
+    margin: 0;
     background-color: var(--second-bg-color);
 }
