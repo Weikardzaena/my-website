@@ -106,7 +106,7 @@ export class AppComponent {
     this.linkPadding = LINK_PADDING_DEFAULT;
     this.fontSize = FONT_SIZE_DEFAULT;
     this.titleFontSize = TITLE_FONT_SIZE_DEFAULT;
-    console.log("Large!");
+    //console.log("Large!");
   }
 
   private ActivateMediumLayout(): void
@@ -117,7 +117,7 @@ export class AppComponent {
     this.linkPadding = LINK_PADDING_DEFAULT;
     this.fontSize = FONT_SIZE_DEFAULT;
     this.titleFontSize = TITLE_FONT_SIZE_DEFAULT;
-    console.log("Medium!");
+    //console.log("Medium!");
   }
 
   private ActivateSmallLayout(): void
@@ -128,7 +128,7 @@ export class AppComponent {
     this.linkPadding = LINK_PADDING_SMALL;
     this.fontSize = FONT_SIZE_SMALL;
     this.titleFontSize = TITLE_FONT_SIZE_SMALL;
-    console.log("Small!");
+    //console.log("Small!");
   }
 
   private ActivateXLargeLayout(): void
@@ -139,7 +139,7 @@ export class AppComponent {
     this.linkPadding = LINK_PADDING_DEFAULT;
     this.fontSize = FONT_SIZE_DEFAULT;
     this.titleFontSize = TITLE_FONT_SIZE_DEFAULT;
-    console.log("XLarge!");
+    //console.log("XLarge!");
   }
 
   private ActivateXSmallLayout(): void
@@ -150,6 +150,6 @@ export class AppComponent {
     this.linkPadding = LINK_PADDING_SMALL;
     this.fontSize = FONT_SIZE_SMALL;
     this.titleFontSize = TITLE_FONT_SIZE_SMALL;
-    console.log("XSmall!");
+    //console.log("XSmall!");
   }
 }
