@@ -1,11 +1,23 @@
-<div id="content-wrapper">
+<div id="content-wrapper" [style.width]="contentSize">
   <div id="content">
-    <h1>{{title}}</h1>
-    <nav id="navbar">
+    <h1 [style.font-size]="titleFontSize">{{title}}</h1>
+    <div id="navbar">
       <ul>
-        <li *ngFor="let route of routes"><a [routerLink]="route.path">{{route.name}}</a></li>
+        <li [style.margin-left]="linkHorizMargin"
+        [style.margin-right]="linkHorizMargin"
+        routerLinkActive="active-link"
+        [style.width]="linkWidth"
+        *ngFor="let route of routes">
+
+          <a [style.padding]="linkPadding"
+          [style.font-size]="fontSize"
+          [routerLink]="route.path">
+              {{route.name}}
+          </a>
+
+        </li>
       </ul>
-    </nav>
+    </div>
     <router-outlet></router-outlet>
   </div>
 </div>
