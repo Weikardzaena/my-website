@@ -18,6 +18,9 @@ const FONT_SIZE_DEFAULT = "1.25em";
 const FONT_SIZE_SMALL = "1em";
 const TITLE_FONT_SIZE_DEFAULT = "4rem";
 const TITLE_FONT_SIZE_SMALL = "2.7rem";
+const HEIGHT_OFFSET_DEFAULT = "101px";
+const HEIGHT_OFFSET_SMALL = "87px";
+const HEIGHT_OFFSET_CALC = "calc(100vh - %s)"
 
 @Component({
   selector: 'app-root',
@@ -35,8 +38,10 @@ export class AppComponent {
   linkPadding = LINK_PADDING_DEFAULT;
   fontSize = FONT_SIZE_DEFAULT;
   titleFontSize = TITLE_FONT_SIZE_DEFAULT;
+  wrapperHeight: string;
 
   constructor(router: Router, breakpointObserver: BreakpointObserver) {
+    this.SetHeightOffset(HEIGHT_OFFSET_DEFAULT);
     this.routes = [];
     let builder: string = "";
 
@@ -106,7 +111,8 @@ export class AppComponent {
     this.linkPadding = LINK_PADDING_DEFAULT;
     this.fontSize = FONT_SIZE_DEFAULT;
     this.titleFontSize = TITLE_FONT_SIZE_DEFAULT;
-    console.log("Large!");
+    this.SetHeightOffset(HEIGHT_OFFSET_DEFAULT);
+    //console.log("Large!");
   }
 
   private ActivateMediumLayout(): void
@@ -117,7 +123,8 @@ export class AppComponent {
     this.linkPadding = LINK_PADDING_DEFAULT;
     this.fontSize = FONT_SIZE_DEFAULT;
     this.titleFontSize = TITLE_FONT_SIZE_DEFAULT;
-    console.log("Medium!");
+    this.SetHeightOffset(HEIGHT_OFFSET_DEFAULT);
+    //console.log("Medium!");
   }
 
   private ActivateSmallLayout(): void
@@ -128,7 +135,8 @@ export class AppComponent {
     this.linkPadding = LINK_PADDING_SMALL;
     this.fontSize = FONT_SIZE_SMALL;
     this.titleFontSize = TITLE_FONT_SIZE_SMALL;
-    console.log("Small!");
+    this.SetHeightOffset(HEIGHT_OFFSET_SMALL);
+    //console.log("Small!");
   }
 
   private ActivateXLargeLayout(): void
@@ -139,7 +147,8 @@ export class AppComponent {
     this.linkPadding = LINK_PADDING_DEFAULT;
     this.fontSize = FONT_SIZE_DEFAULT;
     this.titleFontSize = TITLE_FONT_SIZE_DEFAULT;
-    console.log("XLarge!");
+    this.SetHeightOffset(HEIGHT_OFFSET_DEFAULT);
+    //console.log("XLarge!");
   }
 
   private ActivateXSmallLayout(): void
@@ -150,6 +159,12 @@ export class AppComponent {
     this.linkPadding = LINK_PADDING_SMALL;
     this.fontSize = FONT_SIZE_SMALL;
     this.titleFontSize = TITLE_FONT_SIZE_SMALL;
-    console.log("XSmall!");
+    this.SetHeightOffset(HEIGHT_OFFSET_SMALL);
+    //console.log("XSmall!");
+  }
+
+  private SetHeightOffset(newStr: string): void
+  {
+    this.wrapperHeight = HEIGHT_OFFSET_CALC.replace("%s", newStr);
   }
 }
