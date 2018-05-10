@@ -2,46 +2,14 @@
     margin: 0 auto;
 }
 
+#router-wrapper {
+    margin-top: 2em;
+    border-top: 2px solid var(--second-bg-color);
+}
+
 #content h1 {
     text-align: center;
     margin-bottom: 1.25em;
-}
-
-#navbar {
-    width: 100%;
-    text-align: center;
-}
-
-#navbar ul {
-    margin: 0 auto;
-    list-style: none;
-    padding: 0;
-}
-
-#navbar li {
-    display: inline-block;
-    padding: 0;
-    border-radius: 0.75em;
-}
-
-#navbar li:hover {
-    background-color: var(--second-bg-color);
-}
-
-#navbar a {
-    display: block;
-}
-
-#navbar a:hover {
-    text-decoration: none;
-}
-
-#navbar a:visited {
-    color: var(--main-accent-color);
-}
-
-.active-link {
-    background-color: var(--second-bg-color);
 }
 
 #footer {

@@ -1,3 +1,5 @@
+/* NOTICE */
+/* See NOTICE.md for license info about these fonts. */
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,600');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
@@ -90,4 +92,41 @@ a:hover {
 
 section h2, section h3, section h4 {
     margin: 2em 0em 2em 0em;
+}
+
+.navbar {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar ul {
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0;
+    border-radius: 0.75em;
+}
+
+.navbar li:hover {
+    background-color: var(--second-bg-color);
+}
+
+.navbar a {
+    display: block;
+}
+
+.navbar a:hover {
+    text-decoration: none;
+}
+
+.navbar a:visited {
+    color: var(--main-accent-color);
+}
+
+.active-link {
+    background-color: var(--second-bg-color);
 }
