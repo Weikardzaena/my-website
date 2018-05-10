@@ -1,13 +1,36 @@
 <div class="navbar">
     <ul>
-        <li routerLinkActive="active-link">
-            <a routerLink="site">Site</a>
+        <li [style.margin-left]="linkHorizMargin"
+        [style.margin-right]="linkHorizMargin"
+        routerLinkActive="active-link"
+        [style.width]="linkWidth">
+
+            <a [style.padding]="linkPadding"
+            [style.font-size]="fontSize"
+            routerLink="site">Site</a>
+
         </li>
-        <li routerLinkActive="active-link">
-            <a routerLink="open-sans">Open Sans</a>
+
+        <li [style.margin-left]="linkHorizMargin"
+        [style.margin-right]="linkHorizMargin"
+        routerLinkActive="active-link"
+        [style.width]="linkWidth">
+
+            <a [style.padding]="linkPadding"
+            [style.font-size]="fontSize"
+            routerLink="open-sans">Open Sans</a>
+
         </li>
-        <li routerLinkActive="active-link">
-            <a routerLink="source-code-pro">Source Code Pro</a>
+
+        <li [style.margin-left]="linkHorizMargin"
+        [style.margin-right]="linkHorizMargin"
+        routerLinkActive="active-link"
+        [style.width]="linkWidth">
+
+            <a [style.padding]="linkPadding"
+            [style.font-size]="fontSize"
+            routerLink="source-code-pro">Source Code Pro</a>
+
         </li>
     </ul>
 </div>
