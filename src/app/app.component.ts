@@ -18,8 +18,8 @@ const FONT_SIZE_DEFAULT = "1.25em";
 const FONT_SIZE_SMALL = "1em";
 const TITLE_FONT_SIZE_DEFAULT = "4rem";
 const TITLE_FONT_SIZE_SMALL = "2.7rem";
-const HEIGHT_OFFSET_DEFAULT = "101px";
-const HEIGHT_OFFSET_SMALL = "87px";
+const HEIGHT_OFFSET_DEFAULT = "129px";
+const HEIGHT_OFFSET_SMALL = "115px";
 const HEIGHT_OFFSET_CALC = "calc(100vh - %s)"
 
 @Component({
