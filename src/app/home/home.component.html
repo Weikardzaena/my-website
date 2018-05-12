@@ -1,16 +1,20 @@
-<div id="home-content-left">
+<div [style.width]="width"
+[style.padding-left]="paddingLeft">
     <section>
         <h2>What is this place?</h2>
         <p>
             My name is <b>George Nikolai Kotula</b>, and
-            this website is all about me :-)<br>
+            this website is all about me :-)
+        </p>
+        <p>
             I am a passionate gamer, a certified nerd, and, most importantly, a
             <a routerLink="/about" fragment="career">software engineer</a>.
         </p>
         <p>
-            This site is dedicated to my personal <a
-            routerLink="/projects">projects</a>
-            and me as a person.<br>
+            This site is dedicated to my <a routerLink="/projects">personal
+            projects</a> and me as a person.
+        </p>
+        <p>
             Enjoy your stay!
         </p>
     </section>
@@ -18,7 +22,9 @@
         <h2>How to get in touch with me</h2>
         <p>
             There's a <a routerLink="/contact">Contact</a> page where you can
-            shoot me an email.<br>
+            shoot me an email.
+        </p>
+        <p>
             I don't really have social media, but I do have a <a target="_blank"
             href="{{linkLinkedIn}}">LinkedIn</a> and a
             <a target="_blank" href="{{linkGitHub}}">GitHub</a>.
