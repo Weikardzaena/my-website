@@ -1,7 +1,7 @@
 /* NOTICE */
 /* See NOTICE.md for license info about these fonts. */
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,600');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
 :root {
     --main-bg-color: #282828;
@@ -18,13 +18,13 @@ html, body {
     background: var(--main-bg-color);
     color: var(--main-fg-color);
     font-family: "Open Sans", sans-serif;
+    font-weight: 300;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
 p {
-    text-align: justify;
     font-size: 1.25rem;
 }
 
@@ -56,6 +56,10 @@ h4 {
     font-size: 1.25rem;
 }
 
+b {
+    font-weight: 400;
+}
+
 a {
     font-weight: bold;
 }
@@ -63,6 +67,7 @@ a {
 a:link {
     color: var(--main-accent-color);
     text-decoration: none;
+    font-weight: 400;
 }
 
 a:visited {
