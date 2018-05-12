@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ProjectsService } from '../projects-service/projects.service';
 import { ProjectBase } from '../projects-service/project-base';
@@ -8,11 +8,14 @@ import { ProjectBase } from '../projects-service/project-base';
   templateUrl: './virus-blaster.component.html',
   styleUrls: ['./virus-blaster.component.css']
 })
-export class VirusBlasterComponent {
+export class VirusBlasterComponent implements OnInit {
 
   project: ProjectBase;
 
-  constructor(projectsService: ProjectsService) {
-    this.project = projectsService.getProjectByName("virus-blaster");
+  constructor (private projectsService: ProjectsService) { }
+
+  ngOnInit(): void
+  {
+    this.project = this.projectsService.getProjectByName("virus-blaster");
   }
 }

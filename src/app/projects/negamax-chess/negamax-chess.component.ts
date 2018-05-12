@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ProjectsService } from '../projects-service/projects.service';
 import { ProjectBase } from '../projects-service/project-base';
@@ -8,11 +8,14 @@ import { ProjectBase } from '../projects-service/project-base';
   templateUrl: './negamax-chess.component.html',
   styleUrls: ['./negamax-chess.component.css']
 })
-export class NegamaxChessComponent {
+export class NegamaxChessComponent implements OnInit {
 
   project: ProjectBase;
 
-  constructor (projectsService: ProjectsService) {
-    this.project = projectsService.getProjectByName("negamax-chess");
+  constructor (private projectsService: ProjectsService) { }
+
+  ngOnInit(): void
+  {
+    this.project = this.projectsService.getProjectByName("negamax-chess");
   }
 }
