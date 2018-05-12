@@ -6,6 +6,7 @@ import { ProjectsRoutingModule } from './projects-routing.module';
 import { ProjectsComponent } from './projects.component';
 import { AlienBlasterComponent } from './alien-blaster/alien-blaster.component';
 import { NegamaxChessComponent } from './negamax-chess/negamax-chess.component';
+import { VirusBlasterComponent } from './virus-blaster/virus-blaster.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { NegamaxChessComponent } from './negamax-chess/negamax-chess.component';
   declarations: [
     ProjectsComponent,
     AlienBlasterComponent,
-    NegamaxChessComponent
+    NegamaxChessComponent,
+    VirusBlasterComponent
   ]
 })
 export class ProjectsModule { }

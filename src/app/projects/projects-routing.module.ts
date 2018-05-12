@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProjectsComponent } from './projects.component';
 import { AlienBlasterComponent } from './alien-blaster/alien-blaster.component';
 import { NegamaxChessComponent } from './negamax-chess/negamax-chess.component';
+import { VirusBlasterComponent } from './virus-blaster/virus-blaster.component';
 
 const PROJECTS_ROUTES: Routes = [
   {
@@ -17,6 +18,10 @@ const PROJECTS_ROUTES: Routes = [
       {
         path: 'negamax-chess',
         component: NegamaxChessComponent
+      },
+      {
+        path: 'virus-blaster',
+        component: VirusBlasterComponent
       }
     ]
   }
