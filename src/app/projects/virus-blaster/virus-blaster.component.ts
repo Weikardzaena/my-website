@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { ProjectsService } from '../projects-service/projects.service';
+import { ProjectBase } from '../projects-service/project-base';
 
 @Component({
   selector: 'app-virus-blaster',
   templateUrl: './virus-blaster.component.html',
   styleUrls: ['./virus-blaster.component.css']
 })
-export class VirusBlasterComponent implements OnInit {
+export class VirusBlasterComponent {
 
-  constructor() { }
+  project: ProjectBase;
 
-  ngOnInit() {
+  constructor(projectsService: ProjectsService) {
+    this.project = projectsService.getProjectByName("virus-blaster");
   }
-
 }
