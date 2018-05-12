@@ -13,6 +13,9 @@ export class ProjectsComponent implements OnInit {
   gameProjects: ProjectBase[];
   otherProjects: ProjectBase[];
 
+  projWidth = "40%";
+  projMargin = "0.33em";
+
   constructor(private projectsService: ProjectsService) { }
 
   ngOnInit(): void
