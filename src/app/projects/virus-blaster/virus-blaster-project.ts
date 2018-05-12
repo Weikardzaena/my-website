@@ -1,10 +1,11 @@
-import { ProjectBase } from '../projects-service/project-base';
+import { ProjectBase, ProjectType } from '../projects-service/project-base';
 
 const BRIEF_DESC = "A UE4 spaceship shoot 'em up game made with classmates.";
 const FULL_DESC = "Virus Blaster full description placeholder.";
 const TITLE = "Virus Blaster";
 const PROJ_NAME = "virus-blaster";
 const PROJ_LINK = "virus-blaster";
+const PROJ_TYPE: ProjectType = ProjectType.Game;
 
 export class VirusBlasterProject extends ProjectBase {
     constructor() {
@@ -34,5 +35,10 @@ export class VirusBlasterProject extends ProjectBase {
     public getRouterLink(): string
     {
         return PROJ_LINK;
+    }
+
+    public getProjType(): ProjectType
+    {
+        return PROJ_TYPE;
     }
 }

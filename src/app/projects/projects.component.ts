@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ProjectsService } from './projects-service/projects.service';
-import { ProjectBase } from './projects-service/project-base';
+import { ProjectBase, ProjectType } from './projects-service/project-base';
 
 @Component({
   selector: 'app-projects',
@@ -10,12 +10,14 @@ import { ProjectBase } from './projects-service/project-base';
 })
 export class ProjectsComponent implements OnInit {
 
-  projects: ProjectBase[];
+  gameProjects: ProjectBase[];
+  otherProjects: ProjectBase[];
 
   constructor(private projectsService: ProjectsService) { }
 
   ngOnInit(): void
   {
-    this.projects = this.projectsService.getProjects();
+    this.gameProjects = this.projectsService.getProjectsByType(ProjectType.Game);
+    this.otherProjects = this.projectsService.getProjectsByType(ProjectType.Other);
   }
 }

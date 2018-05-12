@@ -1,7 +1,13 @@
 <section>
   <h2>Games</h2>
   <ul>
-    <li *ngFor="let project of projects"><a [routerLink]="project.getRouterLink()">{{project.getTitle()}}</a></li>
+    <li *ngFor="let project of gameProjects"><a [routerLink]="project.getRouterLink()">{{project.getTitle()}}</a></li>
+  </ul>
+</section>
+<section>
+  <h2>Other</h2>
+  <ul>
+    <li *ngFor="let project of otherProjects"><a [routerLink]="project.getRouterLink()">{{project.getTitle()}}</a></li>
   </ul>
 </section>
 <router-outlet></router-outlet>

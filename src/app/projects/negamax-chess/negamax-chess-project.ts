@@ -1,10 +1,11 @@
-import { ProjectBase } from '../projects-service/project-base';
+import { ProjectBase, ProjectType } from '../projects-service/project-base';
 
 const BRIEF_DESC = "A MonoGame implementation of a custom Negamax Chess AI.";
 const FULL_DESC = "Negamax Chess full description placeholder.";
 const TITLE = "Negamax Chess";
 const PROJ_NAME = "negamax-chess";
 const PROJ_LINK = "negamax-chess";
+const PROJ_TYPE: ProjectType = ProjectType.Game;
 
 export class NegamaxChessProject extends ProjectBase {
     constructor() {
@@ -34,5 +35,10 @@ export class NegamaxChessProject extends ProjectBase {
     public getRouterLink(): string
     {
         return PROJ_LINK;
+    }
+
+    public getProjType(): ProjectType
+    {
+        return PROJ_TYPE;
     }
 }

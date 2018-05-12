@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 
-import { ProjectBase } from './project-base';
+import { ProjectBase, ProjectType } from './project-base';
 import { VirusBlasterProject } from '../virus-blaster/virus-blaster-project';
 import { AlienBlasterProject } from '../alien-blaster/alien-blaster-project';
 import { NegamaxChessProject } from '../negamax-chess/negamax-chess-project';
@@ -34,5 +34,12 @@ export class ProjectsService {
   public getProjects(): ProjectBase[]
   {
     return this.projects;
+  }
+
+  public getProjectsByType(projectType: ProjectType): ProjectBase[]
+  {
+    return this.projects.filter(function(element) {
+      return element.getProjType() === projectType;
+    });
   }
 }
