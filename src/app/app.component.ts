@@ -40,7 +40,7 @@ export class AppComponent {
   titleFontSize = TITLE_FONT_SIZE_DEFAULT;
   wrapperHeight: string;
 
-  constructor(router: Router, breakpointObserver: BreakpointObserver) {
+  constructor(private router: Router, breakpointObserver: BreakpointObserver) {
     this.SetHeightOffset(HEIGHT_OFFSET_DEFAULT);
     this.routes = [];
     let builder: string = "";
@@ -55,6 +55,8 @@ export class AppComponent {
           this.routes.push({path : route.path, name : builder});
         }
       }
+
+      router.onSameUrlNavigation = 'reload';
     });
 
     // XSmall layout:

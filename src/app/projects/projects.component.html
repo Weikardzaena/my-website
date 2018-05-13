@@ -1,19 +1,43 @@
-<section>
-  <h2>Games</h2>
-  <a *ngFor="let project of gameProjects"
-  [routerLink]="project.getRouterLink()">
-    <div class="project"
+<div *ngIf="!isViewingProj">
+  <section>
+    <h2>Games</h2>
+
+    <a *ngFor="let project of gameProjects"
+    class="project"
+    [routerLink]="project.getRouterLink()"
     [style.width]="projWidth"
     [style.margin]="projMargin">
+
       <h4>{{project.getTitle()}}</h4>
       <p>{{project.getBriefDesc()}}</p>
-    </div>
-  </a>
-</section>
-<section>
-  <h2>Other</h2>
-  <ul>
-    <li *ngFor="let project of otherProjects"><a [routerLink]="project.getRouterLink()">{{project.getTitle()}}</a></li>
-  </ul>
-</section>
+
+    </a>
+
+  </section>
+
+  <section>
+    <h2>Other</h2>
+
+    <a *ngFor="let project of otherProjects"
+    [routerLink]="project.getRouterLink()"
+    class="project"
+    [style.width]="projWidth"
+    [style.margin]="projMargin">
+
+      <h4>{{project.getTitle()}}</h4>
+      <p>{{project.getBriefDesc()}}</p>
+
+    </a>
+  </section>
+
+</div>
+
+<a *ngIf="isViewingProj"
+class="back-button"
+routerLink="/projects">
+
+  Back to Projects
+
+</a>
+
 <router-outlet></router-outlet>
